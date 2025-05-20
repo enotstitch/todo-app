@@ -13,11 +13,12 @@ html {
   --dark-color: #000;
   --light-color: #fff;
   --error-color: rgb(227, 0, 0);
-  --border-color: #989898;
+  --border-color: #449d6b;
   --silver-color: #bbbbbb;
   --venus-color: #998899;
   --text-color: #202020;
   --task-done: #f4f4f4;
+  --bg-btn-color: #7fcfff;
 }
 
 @font-face {
@@ -35,10 +36,14 @@ body {
   color: var(--text-color);
 }
 
+.section {
+  padding: 50px 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0 20px;
 }
 
 .btn-reset {
@@ -47,4 +52,124 @@ body {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.todo-app {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-app__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.new-task {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.new-task__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.new-task__input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  color: var(--text-color);
+}
+
+.new-task__btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--bg-btn-color);
+  cursor: pointer;
+  font-size: inherit;
+  color: var(--text-color);
+  transition: filter 0.3s;
+}
+
+.new-task__btn:hover {
+  filter: brightness(90%);
+}
+
+.todo-app__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--light-color);
+}
+
+.task__inner {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.task__status {
+  cursor: pointer;
+}
+
+.task__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task__text {
+  margin: 0;
+}
+
+.task__priority {
+  font-size: 15px;
+}
+
+.task__priority::before {
+  content: '#';
+}
+
+.task__btn-delete {
+  font-family: inherit;
+  font-size: 16px;
 }

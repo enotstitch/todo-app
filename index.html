@@ -10,6 +10,41 @@
 </head>
 
 <body>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="todo">
+          <h1 class="todo__title">Todo App</h1>
+
+          <div class="todo__app todo-app">
+            <h2 class="todo-app__title">Tasks</h2>
+
+            <form class="todo-app__new-task new-task" action="#">
+              <label class="new-task__label" for="">
+                <input class="new-task__input" type="text" placeholder="Добавить важных дел">
+                <input class="new-task__btn" type="submit" value="Добавить">
+              </label>
+            </form>
+
+            <ul class="todo-app__list list-reset">
+              <li class="todo-app__list-item task">
+                <div class="task__inner">
+                  <input class="task__status" type="checkbox">
+                  <div class="task__info">
+                    <p class="task__text">Задача</p>
+                    <span class="task__priority">Важно</span>
+                  </div>
+                </div>
+                <button class="task__btn-delete btn-reset">Удалить</button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
   <script type="module" src="./js/main.js"></script>
 </body>
 
