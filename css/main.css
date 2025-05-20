@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --accent-color: #7acc82;
+  --dark-color: #000;
+  --light-color: #fff;
+  --error-color: rgb(227, 0, 0);
+  --border-color: #989898;
+  --silver-color: #bbbbbb;
+  --venus-color: #998899;
+  --text-color: #202020;
+  --task-done: #f4f4f4;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto.woff2') format('woff2');
+}
+
+body {
+  margin: 0;
+  background-color: var(--accent-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
